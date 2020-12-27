@@ -1,3 +1,17 @@
+.navbar-brand {
+    background-size: 80vh;
+}
+
+.body{
+    background-color: black;
+}
+/*
+#mainNavbar {
+    background-color: black;
+    background-size: 20vh;
+
+}
+
 body {
     padding-top: 56px;
     background-color: rgb(221, 221, 221);
@@ -6,7 +20,7 @@ body {
     background-attachment: fixed;
 }
 
-.jumbotron {
+jumbotron {
     background: url("https://cdn.hipwallpaper.com/i/61/85/PXt2QA.jpg");
     background-size: cover;
 }
@@ -162,3 +176,5 @@ body {
     background-color:#fffefe;
     color:#000000;
 }
+
+*/

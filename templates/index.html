@@ -4,96 +4,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Index</title>
-
+    <title>Life Expectancy Predictor</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link href='https://fonts.googleapis.com/css?family=Libre+Baskerville' rel='stylesheet'>
     <link rel="stylesheet" type="text/css" href="../static/css/style.css">
 </head>
 
 <body>
-    <!-- Building the navigation bar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <div class="container">
-            <a class="nav-link" href="/">Home</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto">
-                    <!-- Visualisations Tab -->
-                    <li class="nav-item">
-                        <a class="nav-link" href="/visualisations">Visualisations</a>
-                    </li>
-                    <!-- About Us -->
-                    <li class="nav-item">
-                        <a class="nav-link" href="/about">About Us</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-
-
-    <!-- Jumbotron -->
-    <header class="jumbotron jumbotron-fluid">
-        <div class="container-fluid text-center">
-            <h1 class="display-3" id="title" style="font-family: 'Libre Baskerville'; color: rgb(255, 255, 255); ">Life
-                Expectency Predictor</h1>
-        </div>
-    </header>
-
-    <!-- Image Grid -->
-    <div class="row">
-        <div class="col-md-6 clm" id="img1">
-            <img src="https://cdn.pixabay.com/photo/2018/02/27/17/40/graph-3186082_960_720.png" alt="Visualisations" class="img-fluid">
-            <button onclick="window.location.href='/visualisations'" class="btn">Visualisations</button>
-        </div>
-
-        <div class="cold-md-6 clm" id="img1">
-            <img src="https://www.1seouzmani.com/en/wp-content/uploads/2020/04/about_us.jpg" alt="Data" class="img-fluid">
-            <button onclick="window.location.href='/about'" class="btn">About Us</button>
-        </div>
-
-    </div>
-
+     
     <!-- Project description section -->
     <div class="container-fluid" style="font-family: sans-serif;">
         <div class="content" style="text-align: center;">
             <p class="center" style="font-family: 'Libre Baskerville';">
-                <span class="tag" style="font-size:60px;"><strong><u>Our Project</u></strong></span></p>
+                <span class="tag" style="font-size:60px;"><strong><u>Life Expectancy Predictor</u></strong></span></p>
             <div id="info"><strong>
-                    Life expectancy is one of the key metrics to assess population health of any country.<br>
-                    <br>It is affected by multiple factors such as access to healthcare, birth rates, availability of sanitation resources,
+                    Life expectancy refers to the average age a person is expected to live and is one of the key metrics to assess population health of any country.<br>
+                    It is affected by multiple socio-economic factors such as access to healthcare, birth rates, availability of sanitation resources,
                     prevalence of <br>different communicable and non-communicable disease.<br><br>
-                    In this project, we use multiple linear regression model to predict life expectancy of any country based on crude birth rate,
-                    fertility rate <br>and Tuberculosis incidence per 100,000 people. <br>
+                    In this project, I use gradient boosting regression model to predict life expectancy based DPT immunization rate, crude death rate,<br> road traffic mortality,
+                    death rate due to communicable diseases and crude birth rate. <br><br><br>
                     </strong>
             </div>
         </div>
     </div>
 
-    <!-- Tableau Visualisations here-->
-    <div class="container" id="predict_table" style="width: 40%;">
+    <div class="container" id="predict_table" style="width: 80%;" style="justify-content: center;">
         <div class="row">
             <div class="col-md-12">
                 <div class="panel panel-default">
-                    <div class="panel-body">
+                    <div class="panel-body" style="text-align: center;">
                         <h2>Predict Life Expectancy</h2>
                         <hr>
                         <div class="login">
                             <!-- Main Input For Receiving Query to our ML -->
-                            <p style="font-size: 20px;"><strong>Try out our model here!</strong></p>
+                            <p style="font-size: 30px; text-align: center;"><strong>Try out the model here!</strong></p>
                             <form action="{{ url_for('predict')}}" method="post">
-                                <input type="text" name="experience" placeholder="Crude_birth_rate"
+                                <input type="text" name="DPT immunization rate" placeholder="DPT immunization rate"
                                     required="required" />
-                                <input type="text" name="test_score" placeholder="Fertility_rate" required="required" />
-                                <input type="text" name="interview_score" placeholder="TB_incidence"
+                                <input type="text" name="Crude death rate" placeholder="Crude death rate" 
                                     required="required" />
-
+                                <input type="text" name="Road traffic mortality" placeholder="Road traffic mortality"
+                                    required="required" />
+                                <input type="text" name="Comm disease death rate" placeholder="Comm disease death rate"
+                                    required="required" />
+                                <input type="text" name="Crude birth rate" placeholder="Crude birth rate"
+                                    required="required" />
+                                <br><br>    
                                 <button type="submit" class="btn btn-primary btn-block btn-large"
                                     id="predict">Predict</button>
                             </form>
@@ -111,29 +67,21 @@
     </div>
 
 
-    <a href="http://datatopics.worldbank.org/world-development-indicators/" target="_blank">
-        <div id="worldbank" target="_blank">
-            <img src="https://www.worldbank.org/content/dam/wbr/logo/logo-wb-header-en.svg" alt="WorldBank"
-                style="width:100%;max-width:700px" class="w3-margin-top">
-        </div>
-    </a>
-
     <!-- Footer section consisting of developers -->
     <footer class="py-3 bg-light">
         <div class="container">
-            <p class="text-center"><strong>
-                    Developers: <a href="https://github.com/ashdrayton" target="_blank">Ash Drayton</a> |
-                    <a href="https://github.com/alexlawson274" target="_blank">Alex Lawson</a> |
-                    <a href="https://github.com/susovd" target="_blank">Susov Dhakal</a> |
-                    <a href="https://github.com/Rishi0406" target="_blank">Rishit Sheth</a> |
-                    <a href="https://github.com/vineetgoyal01" target="_blank">Vineet Goyal</a>
-                </strong>
+            <p class="text-center"><strong>Developed by: Susov Dhakal</strong>
+                <a href="https://github.com/susovd" target="_blank">(Github,</a>
+                <a href="https://www.linkedin.com/in/susovdhakal/" target="_blank"> Linkedin)</a> 
+                <br>
+                Data obtained from <a href="http://datatopics.worldbank.org/world-development-indicators/" target="_blank">The World Bank.</a> 
             </p>
         </div>
     </footer>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 
 </html>
