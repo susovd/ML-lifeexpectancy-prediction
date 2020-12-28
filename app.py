@@ -18,18 +18,8 @@ def predict():
     int_features = [float(x) for x in request.form.values()]
     final_features = [np.array(int_features)]
     prediction = model.predict(final_features)
-    output = prediction[0]
-    return render_template('index.html', prediction_text = "The estimated life expectancy is {}".format(output))
-
-
-@app.route("/visualisations")
-def visualisations():
-    return render_template("visualisations.html")
-
-@app.route("/about")
-def about():
-    return render_template("about.html")
-
+    output = round(prediction[0],2)
+    return render_template('index.html', prediction_text = "The estimated life expectancy is {}".format(output) + " years.")
 
 
 if __name__ == '__main__':
