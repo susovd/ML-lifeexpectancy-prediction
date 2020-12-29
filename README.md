@@ -47,7 +47,7 @@ Since, linear regression is pretty basic, I tried to improve the model by using 
 
 Gradient boosting regression showed my model prediction vs actual prediction as follows.
 
-<img src="static/images/heatmappredictiongbr.png" alt="gbr">
+<img src="static/images/predictiongbr.png" alt="gbr">
 
 Finally, I deployed the gradient boosting regression model using Heroku app [here](https://sd-life-expectancy.herokuapp.com/predict).
 
