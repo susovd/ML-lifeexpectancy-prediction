@@ -63,7 +63,7 @@ Then, you can run the app.py locally. App.py will run using flask.
   * [seaborn](https://seaborn.pydata.org/)
   * [Flask](https://flask-doc.readthedocs.io/en/latest/)
 * [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
-* [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS#:~:text=Cascading%20Style%20Sheets%20%28CSS%29%20is%20a%20stylesheet%20language,on%20paper%2C%20in%20speech%2C%20or%20on%20other%20media.)
+* [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS#:~:text=Cascading%20Style%20Sheets%20%28CSS%29%20is%20a%20stylesheet%20language,on%20paper%2C%20in%20speech%2C%20or%20on%20other%20media.) (work in progress)
 * [Scikit-learn](https://scikit-learn.org/stable/)
 
 
