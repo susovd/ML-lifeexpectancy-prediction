@@ -49,7 +49,7 @@ Gradient boosting regression showed my model prediction vs actual prediction as 
 
 <img src="static/images/predictiongbr.png" alt="gbr">
 
-Finally, I deployed the gradient boosting regression model using Heroku app [here](https://sd-life-expectancy.herokuapp.com/predict).
+Finally, I deployed the gradient boosting regression model using Heroku app [here](https://sd-life-expectancy.herokuapp.com/).
 
 If you would like to run my model locally, please clone the repo in your local machine. Please ensure your python environment satisfies the requirements to run the code as shown in requirements.txt file. 
 Then, you can run the app.py locally. App.py will run using flask. 
