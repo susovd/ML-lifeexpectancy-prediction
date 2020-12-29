@@ -2,7 +2,7 @@
 <br />
 <p align="center">
   <a href=>
-    <img src="https://www.worldbank.org/content/dam/wbr/logo/logo-wb-header-en.svg" alt="WorldBank" width="200" height="200">
+    <img src="https://www.worldbank.org/content/dam/wbr/logo/logo-wb-header-en.svg" alt="WorldBank">
   </a>
 
   <h3 align="center">Life expectancy prediction</h3>
@@ -31,23 +31,23 @@ road traffic mortality, death rate due to communicable diseases and crude birth 
  
 After data cleaning, 20 different variables of interest were identified. The correlation heatmap of those variables against life expectancy is presented below.  
 
-<img src="static/images/heatmap.png" alt="heatmap" width="200" height="200">
+<img src="static/images/heatmap.png" alt="heatmap">
 
 When the selected features were sorted in descending order from the most positive to most negative, I found following result.
 
-<img src="static/images/correlations.png" alt="WorldBank" width="200" height="200">
+<img src="static/images/correlations.png" alt="correlations">
 
 Based on these heatmaps, I selected 5 features, DPT immunization rate, crude death rate, road traffic mortality, death rate due to communicable diseases, and crude birth rate to predict life expectancy. 
 
 First, I used linear regression for my prediction and found the following result from my model.
 
-<img src="static/images/predictionlr.png" alt="linearreg" width="200" height="200">
+<img src="static/images/predictionlr.png" alt="linearreg">
 
 Since, linear regression is pretty basic, I tried to improve the model by using ridge regression and gradient boosting regression to improve the model. 
 
 Gradient boosting regression showed my model prediction vs actual prediction as follows.
 
-<img src="static/images/heatmappredictiongbr.png" alt="gbr" width="200" height="200">
+<img src="static/images/heatmappredictiongbr.png" alt="gbr">
 
 Finally, I deployed the gradient boosting regression model using Heroku app [here](https://sd-life-expectancy.herokuapp.com/predict).
 
