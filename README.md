@@ -51,6 +51,8 @@ Gradient boosting regression showed my model prediction vs actual prediction as 
 
 Finally, I deployed the gradient boosting regression model using Heroku app [here](https://sd-life-expectancy.herokuapp.com/).
 
+Conclusion: Gradient boosting regression model was most accurate in predicting life expectancy compared to multiple linear regression and ridge regression. 
+
 If you would like to run my model locally, please clone the repo in your local machine. Please ensure your python environment satisfies the requirements to run the code as shown in requirements.txt file. 
 Then, you can run the app.py locally. App.py will run using flask. 
 
