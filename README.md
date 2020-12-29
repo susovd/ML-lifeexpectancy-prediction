@@ -39,7 +39,7 @@ When the selected features were sorted in descending order from the most positiv
 
 Based on these heatmaps, I selected 5 features, DPT immunization rate, crude death rate, road traffic mortality, death rate due to communicable diseases, and crude birth rate to predict life expectancy. 
 
-First, I used linear regression for my prediction and found the following result from my model.
+First, I used linear regression for my prediction and found the following result from my model. As the life expectancy increases, the accuracy of the multiple linear regression increases.
 
 <img src="static/images/predictionlr.png" alt="linearreg">
 
